@@ -145,11 +145,6 @@ systemctl enable --now cloudflared
 systemctl restart cloudflared
 systemctl restart apache2
 
-sudo chown -R www-data:www-data /var/www/html
-sudo find /var/www/html -type d -exec chmod 755 {} \;
-sudo find /var/www/html -type f -exec chmod 644 {} \;
-sudo systemctl restart apache2
-
 echo
 echo "Concluido:"
 echo "Painel: https://${HOSTNAME}/"
